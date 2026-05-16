@@ -1,0 +1,11 @@
+/* ═══════════════════════════════════════════════════════════════
+   styles/index.css
+   Main entry point — orchestrates modular CSS files.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import "./tokens.css";      /* 1. Variables and Themes */
+@import "./layout.css";      /* 2. Reset and Structural Shell */
+@import "./components.css";  /* 3. Global UI Components */
+@import "./charts.css";      /* 4. Specialized Visuals */
+@import "./panels.css";      /* 5. Panel-specific Layouts */
+@import "./animations.css";  /* 6. Keyframes and Feedback */
