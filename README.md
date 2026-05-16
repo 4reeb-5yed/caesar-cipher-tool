@@ -10,10 +10,15 @@ A modular React application for encrypting and decrypting text using the Caesar 
 - **Reports**: Generate a plain-text summary of the analysis.
 
 ## Project Structure
-- `src/engine/`: Core logic for shifting characters and calculating frequency.
-- `src/hooks/`: React hooks for managing app state and notifications.
-- `src/panels/`: Main interface views for decoding, encrypting, and analysis.
-- `src/styles/`: CSS files for layout and themeing.
+src/
+├── components/   # Reusable UI parts (Buttons, Cards, Charts)
+├── engine/       # Cipher logic and frequency constants
+├── hooks/        # Custom React hooks (useToast, useDecoder)
+├── panels/       # View containers (DecoderPanel, AnalysisPanel)
+├── services/     # Utility services (File and Clipboard handling)
+├── styles/       # CSS modules and design tokens
+├── App.jsx       # Main Application entry and global state
+└── main.jsx      # React DOM rendering entry point
 
 ## How to Run
 1. Install dependencies:
