@@ -20,14 +20,22 @@ export const SHIFT_DEFAULT_ENCRYPT = 3;
 export const SHIFT_DEFAULT_DECRYPT = 3;
 
 export const AUTODETECT_CANDIDATES = 8; // top N candidates to surface
-export const MIN_LETTERS_FOR_DETECTION = 3; // below this, skip chi-squared
 
-// English letter frequency baseline (percentage)
+// Raised from 3 → 20.
+// Chi-squared frequency analysis is statistically meaningless below ~20 letters.
+// With fewer letters, letter distribution is too sparse to reliably identify
+// any shift — the engine will just pick noise as the "best" candidate.
+export const MIN_LETTERS_FOR_DETECTION = 20;
+
+// English letter frequency baseline (percentage scale, sums to ~100).
+// Source: Oxford English Dictionary corpus.
+// IMPORTANT: these are percentages (e.g. 'e' = 12.702%), NOT decimals (0.127).
+// cipherEngine.js chiSquared() depends on this scale — do not change to decimals.
 export const ENGLISH_FREQ = {
   a: 8.167, b: 1.492, c: 2.782, d: 4.253, e: 12.702, f: 2.228,
-  g: 2.015, h: 6.094, i: 6.966, j: 0.153, k: 0.772, l: 4.025,
-  m: 2.406, n: 6.749, o: 7.507, p: 1.929, q: 0.095, r: 5.987,
-  s: 6.327, t: 9.056, u: 2.758, v: 0.978, w: 2.360, x: 0.150,
+  g: 2.015, h: 6.094, i: 6.966, j: 0.153, k: 0.772,  l: 4.025,
+  m: 2.406, n: 6.749, o: 7.507, p: 1.929, q: 0.095,  r: 5.987,
+  s: 6.327, t: 9.056, u: 2.758, v: 0.978, w: 2.360,  x: 0.150,
   y: 1.974, z: 0.074,
 };
 
