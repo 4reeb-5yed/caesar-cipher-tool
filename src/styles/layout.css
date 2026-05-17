@@ -54,18 +54,82 @@ body {
 .sidebar {
   width: var(--sidebar-w); flex-shrink: 0;
   background: var(--surface); border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; padding: 12px 8px; gap: 2px; overflow-y: auto;
+  display: flex; flex-direction: column; 
+  padding: 12px 8px; gap: 2px;
+  justify-content: space-between; /* Pushes Footer to bottom */
 }
+
 @media (max-width: 768px) {
   .sidebar {
     position: fixed; inset: 0 auto 0 0; z-index: 100;
     transform: translateX(-100%); transition: transform var(--transition);
-    padding-top: calc(var(--header-h) + 12px); width: 220px;
+    padding-top: calc(var(--header-h) + 12px); width: 240px;
   }
   .sidebar.open { transform: translateX(0); }
 }
 .sidebar-overlay { display: none; position: fixed; inset: 0; z-index: 99; background: rgba(0,0,0,.7); }
 @media (max-width: 768px) { .sidebar-overlay.open { display: block; } }
+
+/* Sidebar Specific Layout Areas */
+.sidebar-links-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-footer {
+  padding: 16px 10px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.footer-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text3);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.dev-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.dev-links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dev-link {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--transition);
+}
+
+.dev-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+.dev-link svg {
+  color: var(--text3);
+}
+
+.dev-link:hover svg {
+  color: var(--accent);
+}
 
 /* Nav items */
 .nav-section {
@@ -97,5 +161,5 @@ body {
 @media (max-width: 480px) { .main { padding: 16px; gap: 16px; } }
 
 /* Panels (only active one is visible) */
-.panel        { display: none; }
+.panel { display: none; }
 .panel.active { display: flex; flex-direction: column; gap: 20px; }

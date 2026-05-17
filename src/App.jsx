@@ -26,7 +26,7 @@ import { useDecoder  } from "./hooks/useDecoder.js";
 import { useEncrypter} from "./hooks/useEncrypter.js";
 
 // Navigation components
-import { TopBar, Sidebar } from "./components/navigation/index.jsx";
+import { TopBar, Sidebar, SidebarFooter } from "./components/navigation/index.jsx";
 
 // Primitive components
 import { ToastContainer, ErrorBoundary } from "./components/primitives/index.jsx";
