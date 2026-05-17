@@ -27,7 +27,7 @@ export default function EncrypterPanel({ enc, onCopy, onDownload, onSendToDecode
     <>
       {/* ── Page header ── */}
       <div>
-        <p className="page-title">Cipher Encrypter</p>
+        <p className="page-title">CaesarCipher Encrypter</p>
         <p className="page-sub">Apply a Caesar shift to plaintext with live mapping preview</p>
       </div>
 

@@ -128,7 +128,7 @@ export default function AnalysisPanel({ decResult, onCopy, showToast }) {
         </>
       ) : (
         <NoteBox icon="ti-info-circle">
-          Decode a ciphertext first to see the full analysis dashboard, or enter custom text below.
+          Decode a caesar ciphertext first to see the full analysis dashboard, or enter custom text below.
         </NoteBox>
       )}
 

@@ -46,7 +46,7 @@ export default function DecoderPanel({ dec, onCopy, onDownload, onNavigate, onSe
     <>
       {/* ── Page header ── */}
       <div>
-        <p className="page-title">Cipher Decoder</p>
+        <p className="page-title">Caesar Cipher Decoder</p>
         <p className="page-sub">Auto-detect or manual shift decryption with frequency analysis</p>
       </div>
 
@@ -100,7 +100,7 @@ export default function DecoderPanel({ dec, onCopy, onDownload, onNavigate, onSe
         <textarea
           value={input}
           onChange={e => setInput(e.target.value)}
-          placeholder="Paste ciphertext here, or drag-and-drop a .txt file…"
+          placeholder="Paste caesar ciphertext here, or drag-and-drop a .txt file…"
           rows={6}
           onKeyDown={e => { if (e.ctrlKey && e.key === "Enter") decode(); }}
         />
