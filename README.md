@@ -172,8 +172,3 @@ MIT License — open source, free to use. See [LICENSE](./LICENSE) for full term
 [![Email](https://img.shields.io/badge/Email-4reeb.5yed%40gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:4reeb.5yed@gmail.com)
 =======
 ---
-
-## License
-
-MIT License
->>>>>>> e9fd3e0 (Refactor repository architecture and documentation)
