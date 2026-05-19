@@ -159,7 +159,7 @@ npm run preview
 
 ## License
 
-MIT License — open source, free to use. See [LICENSE](./LICENSE) for full terms.
+MIT License — open source, free to use.
 
 ---
 
